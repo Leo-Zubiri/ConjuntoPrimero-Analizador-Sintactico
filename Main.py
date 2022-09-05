@@ -36,12 +36,12 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         self.Input = self.txtInput.toPlainText().replace(" ","").split('\n')
         self.Variables = self.txtVariables.toPlainText().replace(" ","").split('\n')
         self.Terminales = self.txtTerminales.toPlainText().replace(" ","").split('\n')
-        self.Inicial = self.txtInicial.toPlainText().replace(" ","")
+        #self.Inicial = self.txtInicial.toPlainText().replace(" ","")
 
         mapaInputValores = self.mapearInput(self.Input) 
         conjVariables = self.conjuntoElementos(self.Variables)  
         conjTerminales = self.conjuntoElementos(self.Terminales)
-        nodoInicial = self.Inicial
+        nodoInicial = "self.Inicial"
 
         res = self.analyze.ConjuntoPrimero(mapaInputValores,conjVariables,conjTerminales,nodoInicial)
 
