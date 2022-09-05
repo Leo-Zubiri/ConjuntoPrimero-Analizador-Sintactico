@@ -2,10 +2,12 @@
 Instrucción para convertir la ventana .ui en .py
 pyuic5 Window.ui -o Window.py
 """
+import Analyzer
 
 from statistics import linear_regression
 import sys
 from PyQt5 import uic, QtWidgets
+
 qtCreatorFile = "Window.ui"  # Nombre del archivo aquí.
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
 
@@ -23,6 +25,8 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         self.Terminales = set()
         self.Inicial = ""
         self.Output = ""
+
+        self.analyze = Analyzer.AnalizadorSintactico()
         
     # Área de los Slots
 
@@ -38,6 +42,20 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         conjVariables = self.conjuntoElementos(self.Variables)  
         conjTerminales = self.conjuntoElementos(self.Terminales)
         nodoInicial = self.Inicial
+
+        res = self.analyze.ConjuntoPrimero(mapaInputValores,conjVariables,conjTerminales,nodoInicial)
+
+        #[{aB:'a'},{}]
+        resFormato = ""
+
+        for cadenaCalc in res:
+            for cadena in cadenaCalc:
+                resFormato += "P({}) = {} \n".format(cadena,cadenaCalc[cadena])
+
+        print(res)
+        print(resFormato)
+
+        self.txtOutput.setPlainText(resFormato)
 
 
     def conjuntoElementos(self,lista = []):

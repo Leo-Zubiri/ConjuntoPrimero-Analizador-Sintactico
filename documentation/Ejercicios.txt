@@ -1,0 +1,69 @@
+
+a)
+m -> npq | qt | r
+n -> t | pn
+p -> mn | rt 
+
+VARIABLES
+m,n,p
+
+TERMINALES
+q,t,r
+
+----------------------------------------------
+
+b)
+X -> aX' | bX'
+X' -> abX' | #
+Y -> bZ
+Z -> ab
+
+VARIABLES
+X,X',Y,Z 
+
+TERMINALES
+a,b
+
+----------------------------------------------
+
+c) 
+E -> TE'
+E' -> +TE' | -TE' | #
+T -> FT'
+T' -> *FT' | /FT' | #
+F -> id | num | (E)
+
+VARIABLES
+E,E',T,T',F
+
+TERMINALES
++,-,*,/,id,num,(,)
+
+
+----------------------------------------------
+
+d)
+if -> (condicion) | then | else
+condicion -> exp1opexp2
+op -> < | <= | > | >= | != | =
+
+VARIABLES
+if,condicion,op
+
+TERMINALES
+then,else,exp1,exp2,<,>,!,=,(,)
+
+----------------------------------------------
+
+e)
+I -> LI'
+I' -> LI' | DI' | #
+L -> a | b | z
+D -> 0 | 1 | 9
+
+VARIABLES
+I,I',L,D
+
+TERMINALES
+a,b,z,0,1,9
+----------------------------------------------
