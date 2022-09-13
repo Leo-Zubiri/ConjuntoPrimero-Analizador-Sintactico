@@ -1,5 +1,13 @@
 Conjunto Siguiente Ejercicios
 
+a)
+if -> (condicion) | then | else
+condicion -> exp1opexp2
+op -> >|>=| < |<= | = | == | !=
+
+if,condicion,op
+(,),then,else,exp1,exp2,>,=,<,!
+
 b) 
 
 S -> 0S0 | 01
@@ -17,10 +25,10 @@ c)
 X -> YZ | bY
 X' -> aZ | #
 Y -> ab | ZX
-Z -> B
+Z -> b
 
 X,X',Y,Z
 
-a,B
+a,b
 
 X
