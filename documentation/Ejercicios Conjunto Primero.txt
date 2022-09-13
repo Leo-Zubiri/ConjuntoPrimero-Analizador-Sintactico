@@ -1,15 +1,14 @@
+a) 
 
-a)
 m -> npq | qt | r
 n -> t | pn
-p -> mn | rt 
+p -> mn | rt
 
 VARIABLES
 m,n,p
 
 TERMINALES
 q,t,r
-
 ----------------------------------------------
 
 b)

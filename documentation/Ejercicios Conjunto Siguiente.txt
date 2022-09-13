@@ -1,0 +1,26 @@
+Conjunto Siguiente Ejercicios
+
+b) 
+
+S -> 0S0 | 01
+A -> SB | 0
+B -> 1
+
+S,A,B
+
+0,1
+
+------------------------------------------------
+
+c)
+
+X -> YZ | bY
+X' -> aZ | #
+Y -> ab | ZX
+Z -> B
+
+X,X',Y,Z
+
+a,B
+
+X
